@@ -1,16 +1,16 @@
-## Nomenclature
+# Nomenclature
 __topic__: topic as in mqtt <p>
 __module__: module in a physical sense, so each module gets its own esp with sensors <p>
 __#__: wildcard in mqtt
 
-## Workers
+# Workers
 __module__: module id <p>
 
-### Sensor Worker
-Spawns new thread that handles all sensors of a certain module
+## Sensor Worker
+Spawns new thread that handles all sensors of a certain module <p>
 __time__ <p>
 
-#### Sensor
+### Sensor
 __topic__ <p>
 __type__ <p>
 __pin__ <p>
@@ -22,10 +22,10 @@ maybe generate __topic__ automatically. <p>
 do we need a name or do we just use the topic? <p>
 
 
-### Relay Worker
+## Relay Worker
 Spawns a new thead that handles all relays of a certain module <p>
 
-#### Relay
+### Relay
 __topic__ <p>
 __type__ <p>
 __pin__ <p>
