@@ -66,3 +66,4 @@ use own thread for sensor worker, relay worker, etc. YES <p>
 in a config based system can we archive hotswap or do we need to restart every time we make a change?<p>
 is restarting bad anyways? <p>
 Do we utiliese DACs? YES for Light <p> 
+Can we duplicate Modules with the same config since several modules will have same sensor/actuators? <p>
