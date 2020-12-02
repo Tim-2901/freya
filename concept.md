@@ -57,7 +57,7 @@ combine trigger and action or do it as two things <p>
 
 
   
-  
+# FAQs
   
 ~~own thread for every sensor or for every worker only?~~ <p>
 own worker for each module so module == worker YES<p>
