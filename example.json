@@ -21,7 +21,7 @@
                 {
                     "pin": 2,
                     "type": "humidity",
-                    "topic": "freya/chamber1/humidity" //this is the default topic created automatically by {name}/{node.name}/{type} but can be overwritten
+                    "topic": "freya/chamber1/humidity"
                 },
                 {
                     "pin": 2,
@@ -33,7 +33,7 @@
                     "pin": 5,
                     "type": "relay",
                     "normally_open": true
-                }
+                },
                 {
                     "pin": 4,
                     "type": "light"
