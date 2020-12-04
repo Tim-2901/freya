@@ -11,46 +11,57 @@ Does MQTT saves datetime of last received value or do we need a client keeping t
 
 
 
-# Workers
-__module__: module id <p>
-
+# Node
+__name__: name of the node <p>
+__type__: type of the node (e.g. esp32) <p>
+__intervall__: Interval at which sensor readings are taken <p>
 ## Sensor Worker
 Spawns new thread that handles a number of sensors <p>
-__time__ <p>
-
 ### Sensor
-__topic__ <p>
+__topic__ optional <p>
 __type__ <p>
 __pin__ <p>
 ~~hardwire in firmware or~~ do some kind of functional programming <p>
 __topic__ as: <p>
-{module}/{type}/{pin} -msg: # <p>
-~~{module}/{type}  msg: {pin}~~ <p>
+~~{module}/{type}/{pin} -msg: #~~  <p>
+{module}/{type}  -msg: {pin}<p>
 maybe generate __topic__ automatically. <p>
 do we need a name or do we just use the topic? <p>
 
 
-## Relay Worker
-Spawns a new thead that handles a certain amount of relays <p>
+## Actuator Worker
+Spawns a new thread that handles a certain amount of actuators <p>
 
-### Relay
-__topic__ <p>
+### Actuator
+__topic__ optional <p>
 __type__ <p>
 __pin__ <p>
 
 __topic__ as: <p>
-{module}/{type}/{pin} -msg: on/off <p>
+{module}/{type} -msg: pin, on/off <p>
   
-## Trigger
-Triggers if sth happens e.g. if pressure meats a certain threshold <p>
+## Trigger Worker
+Spawns a new thread that handles a certain amount of triggers <p>
+### Trigger
+__name__ <p>
+__topic__ <p>
+__condition__ <p>
+__threshold__ <p>
+__hysteresis__ <p>
+__action__ <p>
 
-Is it smart to do pressure as functional programming over the internetz since it need to work in realtime and if we have a lag shit is hitting the fan.(jk pump has overpressure turnoff)(auto turn off on dc?) <p>
+## Action Worker
+Spawns a new thread that handles a certain amount of actions <p>
 
-## Action
-Activated by a Trigger, e.g. Pressure Trigger turning of the pump <p>
+### Action
+__name__ <p>
+__topic__ <p>
+__key__ <p>
 
 
-combine trigger and action or do it as two things <p>
+
+
+
 
 
 
@@ -67,3 +78,12 @@ in a config based system can we archive hotswap or do we need to restart every t
 is restarting bad anyways? <p>
 Do we utiliese DACs? YES for Light <p> 
 Can we duplicate Modules with the same config since several modules will have same sensor/actuators? <p>
+Is it smart to do pressure as functional programming over the internetz since it need to work in realtime and if we have a lag shit is hitting the fan.(jk pump has overpressure turnoff)(auto turn off on dc?) <p>
+combine trigger and action or do it as two things <p>
+
+
+
+# Later
+
+Add support for displays <p>
+Add support for buttons, potentiometers... <p>
