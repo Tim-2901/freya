@@ -1,0 +1,44 @@
+{
+    "name": "freya",
+    "debug": "false",
+    "mqttbroker": {
+        "host": "localhost",
+        "port": 1883,
+        "user": "tim",
+        "password": "xxxx"
+    },
+    "mariadb": {
+        "host": "localhost",
+        "port": 3306,
+        "user": "tim",
+        "password": "xxxx"
+    },
+    "nodes": [ 
+        {
+            "name": "chamber1",
+            "type": "esp32",
+            "sensors": [
+                {
+                    "pin": 2,
+                    "type": "humidity",
+                    "topic": "freya/chamber1/humidity" //this is the default topic created automatically by {name}/{node.name}/{type} but can be overwritten
+                },
+                {
+                    "pin": 2,
+                    "type": "temperature"
+                }
+            ],
+            "actuators": [
+                {
+                    "pin": 5,
+                    "type": "relay",
+                    "normally_open": true
+                }
+                {
+                    "pin": 4,
+                    "type": "light"
+                }
+            ]
+        }
+    ]
+}
